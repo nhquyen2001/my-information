@@ -12,7 +12,7 @@ const HeaderSocials = () => {
       <a href='https://github.com/NHQuyen2001' target='_blank'>
         <BsGithub />
       </a>
-      <a href='https://facebook.com' target='_blank'>
+      <a href='https://www.facebook.com/nhquyen01' target='_blank'>
         <BsFacebook />
       </a>
     </div>
