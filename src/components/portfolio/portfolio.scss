@@ -1,0 +1,61 @@
+@import '../../variables.scss';
+
+.portfolio {
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    &__item {
+        background: $color-bg-variant;
+        padding: 1.2rem;
+        border-radius: 1rem;
+        border: 1px solid transparent;
+        transition: $transition;
+
+        &:hover {
+            border-color: $color-primary-variant;
+            background: transparent;
+            transform: scale(1.1);
+
+        }
+
+        &-image {
+            border-radius: 0.9rem;
+            overflow: hidden;
+
+        }
+
+        h3 {
+            margin: 1.5rem 0 1rem;
+        }
+
+        &-cta {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) ===================== */
+@media screen and (max-width: 1024px) {
+    .portfolio {
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+    }
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ===================== */
+@media screen and (max-width: 600px) {
+    .portfolio {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+}
