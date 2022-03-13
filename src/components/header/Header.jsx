@@ -36,7 +36,7 @@ const Header = () => {
           Scroll Down
         </a>
       </div>
-      {showGoToTop && <Gototop />}
+      <Gototop display={showGoToTop} />
     </header>
   );
 };

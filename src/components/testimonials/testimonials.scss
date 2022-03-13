@@ -1,63 +1,62 @@
 @import '../../variables.scss';
 
 .container.testimonials__container {
-    width: 40%;
-    padding-bottom: 3rem;
+  width: 40%;
+  padding-bottom: 3rem;
 }
 
 .testimonials {
-    background: $color-bg-variant;
-    text-align: center;
-    padding: 2rem;
-    border-radius: 2rem;
-    user-select: none;
-    cursor: grab;
+  background: $color-bg-variant;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  user-select: none;
+  cursor: grab;
 
-    &:active{
-        cursor: grabbing;
-    }
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .client {
+  &__avatar {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 0.4rem solid $color-primary-variant;
+  }
 
-    &__avatar {
-        width: 4rem;
-        aspect-ratio: 1/1;
-        overflow: hidden;
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-        border: 0.4rem solid $color-primary-variant;
-    }
-
-    &__review {
-        color: $color-light;
-        font-weight: 300;
-        display: block;
-        width: 80%;
-        margin: 0.8rem auto 0;
-    }
+  &__review {
+    color: $color-light;
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: 0.8rem auto 0;
+  }
 }
 
-.swiper-pagination-clickable .swiper-pagination-bullet{
-    background: $color-primary;
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: $color-primary;
 }
 
 /* ===================== MEDIA QUERIES (MEDIUM DEVICES) ===================== */
 @media screen and (max-width: 1024px) {
-    .container.testimonials__container {
-        width: 60%;
-    }
+  .container.testimonials__container {
+    width: 60%;
+  }
 }
 
 /* ===================== MEDIA QUERIES (SMALL DEVICES) ===================== */
 @media screen and (max-width: 600px) {
-    .container.testimonials__container {
-        width: $container-width-sm;
-    }
+  .container.testimonials__container {
+    width: $container-width-sm;
+  }
 
-    .client {
-        &__review {
-            width: $container-width-sm;
-        }
+  .client {
+    &__review {
+      width: $container-width-sm;
     }
+  }
 }
