@@ -1,0 +1,35 @@
+@import '../../variables.scss';
+
+.goTop {
+    position: fixed;
+    bottom: 2.7rem;
+    right: 12.5%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.6em;
+    color: $color-bg;
+    background: $color-primary;
+    z-index: 100;
+    padding: 8px 8px;
+    border-radius: 50%;
+    transition: ease 0.3s;
+
+    &:hover {
+        background: $color-bg;
+    }
+}
+
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) ===================== */
+@media screen and (max-width: 1024px) {
+    // .goTop{
+    //     display: none;
+    // }
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ===================== */
+@media screen and (max-width: 600px) {
+    .goTop {
+        bottom: 7rem;
+        right: 5.4%;
+    }
+}

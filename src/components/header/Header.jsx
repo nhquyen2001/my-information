@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './header.scss';
 import CTA from './CTA';
 import ME from '../../assets/Quyen2-removebg-preview.png';
 import HeaderSocials from './HeaderSocials';
+import Gototop from '../btn-gototop/Gototop';
 
 const Header = () => {
+  const [showGoToTop, setShowGoToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 300) {
+        setShowGoToTop(true);
+      } else {
+        setShowGoToTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+  });
+
   return (
     <header className='header'>
       <div className='container header__container'>
@@ -18,10 +32,11 @@ const Header = () => {
           <img src={ME} alt='' />
         </div>
 
-        <a href='#contact' className='scroll__down'>
+        <a href='#footer' className='scroll__down'>
           Scroll Down
         </a>
       </div>
+      {showGoToTop && <Gototop />}
     </header>
   );
 };
