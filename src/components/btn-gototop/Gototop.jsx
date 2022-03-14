@@ -8,12 +8,7 @@ const Gototop = ({ display }) => {
     <a
       href='#'
       id='goTop'
-      className='goTop' //{`goTop ${props.display === true ? 'active' : 'inactive'}`}
-      style={{
-        opacity: `${display ? '1' : '0'}`,
-        visibility: `${display ? 'visible' : 'hidden'}`,
-        // background: 'red',
-      }}
+      className={`goTop ${display ? 'active' : 'inactive'}`}
     >
       <IoIosArrowUp /> <br />
       Go Top

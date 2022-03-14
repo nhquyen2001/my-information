@@ -18,15 +18,15 @@
     background: $color-bg;
   }
 }
-// .active {
-//   display: block;
-//   animation: fadeIn 0.4s;
-// }
+.active {
+  opacity: 1;
+  visibility: visible;
+}
 
-// .inactive {
-//   display: none;
-//   animation: fadeOut 0.4s;
-// }
+.inactive {
+  opacity: 0;
+  visibility: hidden;
+}
 
 @keyframes fadeIn {
   from {
